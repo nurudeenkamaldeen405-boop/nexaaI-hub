@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | NexaAI Hub</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <!-- LOGIN SECTION -->
+        <section class="login-section" id="loginSection">
+
+            <div class="login-card">
+
+                <div class="admin-logo">
+                    NexaAI <span>Hub</span>
+                </div>
+
+                <div class="login-heading">
+
+                    <h1>Admin Login</h1>
+
+                    <p>
+                        Sign in to manage your NexaAI Hub website.
+                    </p>
+
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="adminEmail">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="adminEmail"
+                            placeholder="Enter your admin email"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="adminPassword">Password</label>
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit" id="loginButton">
+                        Sign In
+                    </button>
+
+                    <p id="loginMessage" class="message" role="status"></p>
+
+                </form>
+
+                <a href="index.html" class="back-home">
+                    ← Back to Website
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD SECTION -->
+        <section class="dashboard-section" id="dashboardSection" hidden>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="sidebar-logo">
+                    NexaAI <span>Hub</span>
+                </div>
+
+                <p class="sidebar-label">MAIN MENU</p>
+
+                <nav class="sidebar-nav">
+
+                    <button class="sidebar-link active" data-page="overview">
+                        📊 Overview
+                    </button>
+
+                    <button class="sidebar-link" data-page="tools">
+                        🤖 Manage AI Tools
+                    </button>
+
+                    <button class="sidebar-link" data-page="add-tool">
+                        ➕ Add New Tool
+                    </button>
+
+                </nav>
+
+                <div class="sidebar-bottom">
+
+                    <a href="index.html" target="_blank">
+                        🌐 View Website
+                    </a>
+
+                    <button id="logoutButton">
+                        🚪 Logout
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- MAIN CONTENT -->
+            <main class="dashboard-main">
+
+                <header class="dashboard-header">
+
+                    <div>
+                        <h1>Dashboard</h1>
+                        <p>Welcome to your NexaAI Hub control centre.</p>
+                    </div>
+
+                    <div class="admin-profile">
+                        <span>👤</span>
+                        <div>
+                            <strong>Administrator</strong>
+                            <small id="adminEmailDisplay"></small>
+                        </div>
+                    </div>
+
+                </header>
+
+
+                <!-- OVERVIEW PAGE -->
+                <section class="admin-page" id="overviewPage">
+
+                    <h2>Website Overview</h2>
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+                            <span>Total AI Tools</span>
+                            <h3 id="totalTools">0</h3>
+                        </div>
+
+                        <div class="stat-card">
+                            <span>Published Tools</span>
+                            <h3 id="publishedTools">0</h3>
+                        </div>
+
+                        <div class="stat-card">
+                            <span>Unpublished Tools</span>
+                            <h3 id="unpublishedTools">0</h3>
+                        </div>
+
+                    </div>
+
+                    <div class="admin-panel">
+
+                        <h3>Welcome to Your Admin Dashboard</h3>
+
+                        <p>
+                            Manage your AI directory, update tool
+                            information and add affiliate links
+                            from this dashboard.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- MANAGE TOOLS PAGE -->
+                <section class="admin-page" id="toolsPage" hidden>
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2>Manage AI Tools</h2>
+                            <p>View and manage your listed AI tools.</p>
+                        </div>
+
+                        <button class="primary-admin-button" data-page="add-tool">
+                            + Add New Tool
+                        </button>
+
+                    </div>
+
+                    <div class="admin-panel">
+
+                        <div class="table-wrapper">
+
+                            <table>
+
+                                <thead>
+                                    <tr>
+                                        <th>Tool Name</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="toolsTableBody">
+
+                                    <tr>
+                                        <td colspan="4">
+                                            Your tools will appear here.
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ADD TOOL PAGE -->
+                <section class="admin-page" id="add-toolPage" hidden>
+
+                    <div class="page-heading">
+
+                        <div>
+                            <h2 id="toolFormHeading">Add New AI Tool</h2>
+                            <p>Add an AI product to your directory.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="admin-panel">
+
+                        <form id="toolForm">
+
+                            <input type="hidden" id="toolId">
+
+                            <div class="form-group">
+
+                                <label for="toolName">Tool Name</label>
+
+                                <input
+                                    type="text"
+                                    id="toolName"
+                                    placeholder="Example: Jasper AI"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="toolCategory">Category</label>
+
+                                <select id="toolCategory" required>
+
+                                    <option value="">Select Category</option>
+                                    <option value="writing">Writing</option>
+                                    <option value="image">Image Generation</option>
+                                    <option value="video">Video</option>
+                                    <option value="productivity">Productivity</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="other">Other</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="toolDescription">Description</label>
+
+                                <textarea
+                                    id="toolDescription"
+                                    placeholder="Describe what this AI tool does..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="toolLogo">Logo Image URL</label>
+
+                                <input
+                                    type="url"
+                                    id="toolLogo"
+                                    placeholder="https://example.com/logo.png"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="affiliateUrl">Affiliate Referral Link</label>
+
+                                <input
+                                    type="url"
+                                    id="affiliateUrl"
+                                    placeholder="Paste your approved affiliate link"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="toolWebsite">Official Website</label>
+
+                                <input
+                                    type="url"
+                                    id="toolWebsite"
+                                    placeholder="https://example.com"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="toolStatus">Publishing Status</label>
+
+                                <select id="toolStatus" required>
+                                    <option value="draft">Unpublished</option>
+                                    <option value="published">Published</option>
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-actions">
+
+                                <button type="submit" id="saveToolButton">
+                                    Save AI Tool
+                                </button>
+
+                                <button type="button" id="cancelEditButton">
+                                    Cancel
+                                </button>
+
+                            </div>
+
+                            <p id="toolFormMessage" class="message" role="status"></p>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </section>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="js/supabase-config.js"></script>
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | NexaAI Hub</title>
+
+    <meta name="description" content="Contact NexaAI Hub for questions, suggestions, partnerships and business enquiries.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        .contact-section {
+            padding: 80px 20px;
+            background: #0b1020;
+        }
+
+        .contact-container {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-heading h1 {
+            color: white;
+            font-size: 40px;
+            margin: 15px 0;
+        }
+
+        .contact-heading p {
+            color: #aeb4ca;
+            line-height: 1.8;
+        }
+
+        .contact-form {
+            background: #151b30;
+            border: 1px solid #28314b;
+            padding: 35px;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px;
+            background: #0b1020;
+            border: 1px solid #303751;
+            border-radius: 8px;
+            color: white;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #7561f5;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .contact-submit {
+            width: 100%;
+            padding: 15px;
+            background: #7561f5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .contact-submit:hover {
+            background: #5e49df;
+        }
+
+        .contact-note {
+            color: #aeb4ca;
+            font-size: 13px;
+            line-height: 1.7;
+            margin-top: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .contact-heading h1 {
+                font-size: 32px;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                NexaAI <span>Hub</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="tools.html">Explore Tools</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <a href="tools.html" class="nav-button">Explore AI</a>
+
+        </div>
+    </header>
+
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <div class="contact-heading">
+
+                <span class="section-tag">GET IN TOUCH</span>
+
+                <h1>Contact Us</h1>
+
+                <p>
+                    Have a question, suggestion or business enquiry?
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <div class="form-group">
+
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">Subject</label>
+
+                    <select id="subject" name="subject" required>
+
+                        <option value="">Choose a subject</option>
+
+                        <option value="General Enquiry">
+                            General Enquiry
+                        </option>
+
+                        <option value="AI Tool Suggestion">
+                            Suggest an AI Tool
+                        </option>
+
+                        <option value="Partnership">
+                            Partnership
+                        </option>
+
+                        <option value="Affiliate Enquiry">
+                            Affiliate Enquiry
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Your Message</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="contact-submit">
+                    Send Message
+                </button>
+
+                <p class="contact-note">
+                    Our contact form will be connected to a message
+                    delivery service before the website goes live.
+                </p>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="logo">
+                        NexaAI <span>Hub</span>
+                    </a>
+
+                    <p>
+                        Discover AI. Unlock Possibilities.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a href="index.html">Home</a>
+                    <a href="tools.html">Explore Tools</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="disclosure.html">Affiliate Disclosure</a>
+                    <a href="privacy.html">Privacy Policy</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="currentYear"></span>
+                    NexaAI Hub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore AI Tools | NexaAI Hub</title>
+
+    <meta name="description" content="Discover powerful AI tools for writing, image creation, video, productivity and marketing.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tools.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                NexaAI <span>Hub</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="tools.html" class="active">Explore Tools</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="tools.html" class="nav-button">Explore AI</a>
+
+        </div>
+    </header>
+
+
+    <!-- PAGE HERO -->
+    <section class="directory-hero">
+        <div class="container">
+
+            <span class="section-tag">THE AI DIRECTORY</span>
+
+            <h1>Find the Right <span>AI Tool</span></h1>
+
+            <p>
+                Discover powerful artificial intelligence tools
+                that help you work smarter, create faster and achieve more.
+            </p>
+
+            <div class="directory-search">
+                <input
+                    type="text"
+                    id="toolSearch"
+                    placeholder="Search AI tools..."
+                >
+
+                <button id="toolSearchButton">
+                    Search
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TOOL DIRECTORY -->
+    <section class="directory-section">
+        <div class="container">
+
+            <div class="directory-heading">
+                <div>
+                    <span class="section-tag">DISCOVER</span>
+                    <h2>Explore AI Tools</h2>
+                    <p>Choose a category and discover useful AI solutions.</p>
+                </div>
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+            <div class="category-filters" id="categoryFilters">
+
+                <button class="filter-button active" data-category="all">
+                    All Tools
+                </button>
+
+                <button class="filter-button" data-category="writing">
+                    Writing
+                </button>
+
+                <button class="filter-button" data-category="image">
+                    Image Generation
+                </button>
+
+                <button class="filter-button" data-category="video">
+                    Video
+                </button>
+
+                <button class="filter-button" data-category="productivity">
+                    Productivity
+                </button>
+
+                <button class="filter-button" data-category="marketing">
+                    Marketing
+                </button>
+
+                <button class="filter-button" data-category="other">
+                    Other
+                </button>
+
+            </div>
+
+
+            <!-- RESULTS -->
+            <div class="directory-results">
+                <p id="resultsCount">Loading AI tools...</p>
+            </div>
+
+
+            <!-- TOOLS WILL APPEAR HERE -->
+            <div class="tools-grid" id="toolsGrid">
+
+                <div class="loading-message">
+                    <p>Discovering powerful AI tools...</p>
+                </div>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div class="empty-state" id="emptyState" hidden>
+
+                <h3>No tools found</h3>
+
+                <p>
+                    We couldn't find any tools matching your search.
+                    Try another keyword or category.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="directory-cta">
+        <div class="container">
+
+            <h2>Discover More Possibilities With AI</h2>
+
+            <p>
+                The right AI tool can change the way you work,
+                learn and create.
+            </p>
+
+            <a href="index.html" class="primary-button">
+                Back to Home
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        NexaAI <span>Hub</span>
+                    </a>
+
+                    <p>
+                        Discover AI. Unlock Possibilities.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="tools.html">Explore Tools</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="disclosure.html">Affiliate Disclosure</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; <span id="currentYear"></span> NexaAI Hub.
+                    All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/tools.js"></script>
+
+</body>
+</html>

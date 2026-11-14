@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Discover the best AI tools for writing, marketing, productivity, image generation and more.">
+
+    <meta name="keywords"
+        content="AI tools, AI software, AI writing, AI productivity, AI directory">
+
+    <meta name="author" content="NexaAI Hub">
+
+    <title>NexaAI Hub - Discover AI. Unlock Possibilities.</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                NexaAI<span>Hub.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="index.html">Home</a>
+
+                <a href="tools.html">Explore AI</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <a href="tools.html" class="nav-button">
+                    Explore Tools
+                </a>
+
+                <button class="menu-toggle" id="menuToggle">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <div class="hero-badge">
+                🚀 Your Gateway to Artificial Intelligence
+            </div>
+
+            <h1>
+                Discover AI.<br>
+                <span>Unlock Possibilities.</span>
+            </h1>
+
+            <p>
+                Explore powerful AI tools that help you work smarter,
+                create faster and achieve more.
+                Find the right AI solution for your needs.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="tools.html" class="primary-button">
+                    Explore AI Tools →
+                </a>
+
+                <a href="about.html" class="secondary-button">
+                    Learn More
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h3>AI</h3>
+                    <p>Innovation</p>
+                </div>
+
+                <div>
+                    <h3>100%</h3>
+                    <p>Discovery</p>
+                </div>
+
+                <div>
+                    <h3>One Hub</h3>
+                    <p>Endless Possibilities</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH SECTION -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+            <h2>Find the Right AI Tool</h2>
+
+            <p>
+                What are you looking for today?
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search AI tools..."
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="categories section-padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Explore Categories</h2>
+
+                <p>
+                    Discover AI tools for different needs.
+                </p>
+
+            </div>
+
+            <div class="category-grid">
+
+                <a href="tools.html?category=writing"
+                    class="category-card">
+
+                    <div class="category-icon">✍️</div>
+
+                    <h3>AI Writing</h3>
+
+                    <p>Write smarter and faster.</p>
+
+                </a>
+
+
+                <a href="tools.html?category=image"
+                    class="category-card">
+
+                    <div class="category-icon">🎨</div>
+
+                    <h3>AI Image</h3>
+
+                    <p>Create amazing images.</p>
+
+                </a>
+
+
+                <a href="tools.html?category=video"
+                    class="category-card">
+
+                    <div class="category-icon">🎬</div>
+
+                    <h3>AI Video</h3>
+
+                    <p>Create engaging videos.</p>
+
+                </a>
+
+
+                <a href="tools.html?category=productivity"
+                    class="category-card">
+
+                    <div class="category-icon">⚡</div>
+
+                    <h3>Productivity</h3>
+
+                    <p>Improve your workflow.</p>
+
+                </a>
+
+
+                <a href="tools.html?category=marketing"
+                    class="category-card">
+
+                    <div class="category-icon">📈</div>
+
+                    <h3>AI Marketing</h3>
+
+                    <p>Grow your business.</p>
+
+                </a>
+
+
+                <a href="tools.html?category=other"
+                    class="category-card">
+
+                    <div class="category-icon">🤖</div>
+
+                    <h3>Other AI Tools</h3>
+
+                    <p>Discover more possibilities.</p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURED TOOLS -->
+
+    <section class="featured-tools section-padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Featured AI Tools</h2>
+
+                <p>
+                    Discover some popular AI platforms.
+                </p>
+
+            </div>
+
+            <div id="featuredTools" class="tools-grid">
+
+                <!-- Tools will be loaded from the database -->
+
+                <div class="loading-message">
+                    Discovering powerful AI tools...
+                </div>
+
+            </div>
+
+            <div class="center-button">
+
+                <a href="tools.html" class="primary-button">
+                    Explore All Tools →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-us section-padding">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Why NexaAI Hub?</h2>
+
+                <p>
+                    Making AI discovery easier for everyone.
+                </p>
+
+            </div>
+
+            <div class="benefits-grid">
+
+                <div class="benefit-card">
+
+                    <span>🔍</span>
+
+                    <h3>Easy Discovery</h3>
+
+                    <p>
+                        Find useful AI tools without wasting time
+                        searching everywhere.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <span>⭐</span>
+
+                    <h3>Useful Information</h3>
+
+                    <p>
+                        Understand what each AI tool does
+                        before choosing one.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <span>🚀</span>
+
+                    <h3>Save Time</h3>
+
+                    <p>
+                        Discover solutions that can improve
+                        your productivity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter section-padding">
+
+        <div class="container newsletter-content">
+
+            <h2>Stay Ahead with AI</h2>
+
+            <p>
+                Discover useful AI tools and stay updated
+                with the latest innovations.
+            </p>
+
+            <a href="tools.html" class="primary-button">
+                Start Exploring →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo">
+                    NexaAI<span>Hub.</span>
+                </a>
+
+                <p>
+                    Discover AI. Unlock Possibilities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="tools.html">Explore AI</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="disclosure.html">
+                    Affiliate Disclosure
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                NexaAI Hub. All rights reserved.
+            </p>
+
+            <p>
+                Some links may be affiliate links.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/script.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>
